@@ -3,8 +3,8 @@ USE `konyhaseged`;
 
 CREATE TABLE `alapanyagok` (
   `alapanyag_id` int(11) NOT NULL,
-  `nev` int(11) NOT NULL,
-  `mertekegyseg` int(11) NOT NULL
+  `nev` varchar(11) NOT NULL,
+  `mertekegyseg` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE `hozzavalok` (
