@@ -5,9 +5,8 @@ A **KonyhaSeged** egy konyhai folyamatokat, recepteket és kamrakészletet nyilv
 ---
 
 ## ✨ Funkciók
-* 📖 **Receptkezelő:** Receptek hozzáadása, szerkesztése, törlése és kategorizálása.
-* 🥕 **Alapanyag és Kamra Kezelés:** Aktuális készletek követése és figyelmeztetés, ha valami elfogyóban van.
-* 🛒 **Bevásárlólista Generáló:** A hiányzó alapanyagok alapján automatikus vagy manuális bevásárlólista összeállítása.
+* 📖 **Receptkezelő:** Receptek keresés a kamra alapján.
+* 🥕 **Alapanyag és Kamra Kezelés:** Aktuális készletek követése.
 * 🌐 **Hibrid/Webes felület:** Felhasználóbarát HTML/CSS felület a könnyebb kezelhetőségért. (TERVEZETT)
 
 ---
