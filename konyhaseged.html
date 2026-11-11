@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konyha Segéd</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Keress recepteket az otthon található hozzávalóid alapján!">
+  <title>KonyhaSegéd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="KonyhaSegéd kezdőlap">
+      <span class="brand-icon">✳</span>
+      <span>Konyha<span class="brand-accent">Segéd</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Fő navigáció">
+      <a class="active" href="#kereso">Receptkereső</a>
+      <a href="#talalatok">Receptek</a>
+      <a href="#rolunk">Rólunk</a>
+    </nav>
+    <a class="header-link" href="#kereso">Főzzünk! <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="kereso">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> KEVESEBB PAZARLÁS, TÖBB ÉLMÉNY</span>
+        <h1>Mi lapul a<br><em>hűtődben?</em></h1>
+        <p class="hero-text">Írd be, milyen hozzávalóid vannak otthon, mi pedig mutatunk néhány finom ötletet, amivel felhasználhatod őket.</p>
+        <a class="text-link" href="#hozzavalok">Mutasd, hogyan működik <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Friss zöldségek és alapanyagok illusztrációja">
+        <div class="hero-circle"></div>
+        <div class="hero-note"><span>♡</span> Főzz abból,<br>amid már van!</div>
+        <div class="ingredient ingredient-one">🥑</div>
+        <div class="ingredient ingredient-two">🍅</div>
+        <div class="ingredient ingredient-three">🥬</div>
+        <div class="ingredient ingredient-four">🥕</div>
+        <div class="ingredient ingredient-five">🍋</div>
+        <div class="hero-sticker">FRESH<br>& LOCAL</div>
+      </div>
+    </section>
+
+    <section class="search-section" id="hozzavalok">
+      <div class="section-heading">
+        <span class="eyebrow">KEZDJÜK AZ ALAPOKNÁL</span>
+        <h2>Válaszd ki a hozzávalóidat</h2>
+        <p>Jelöld be, mi található a konyhádban! Minél több hozzávalót adsz meg, annál pontosabb találatokat kapsz.</p>
+      </div>
+
+      <div class="search-panel">
+        <div class="panel-top">
+          <div>
+            <h3>Mi van otthon?</h3>
+            <p>Válassz az alábbiak közül, vagy adj hozzá saját hozzávalót.</p>
+          </div>
+          <span class="selected-count" id="selectedCount">0 kiválasztva</span>
+        </div>
+
+        <div class="ingredient-grid" id="ingredientGrid">
+          <!-- A választható hozzávalókat a JavaScript tölti be. -->
+        </div>
+
+        <form class="custom-ingredient-form" id="customIngredientForm">
+          <label class="sr-only" for="customIngredient">Egyéb hozzávaló</label>
+          <input id="customIngredient" type="text" placeholder="Más hozzávaló hozzáadása..." autocomplete="off">
+          <button type="submit" class="add-button">+ Hozzáadás</button>
+        </form>
+
+        <div class="panel-bottom">
+          <button type="button" class="clear-button" id="clearButton">Kijelölések törlése</button>
+          <button type="button" class="search-button" id="searchButton">Receptek keresése <span>→</span></button>
+        </div>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="results-section" id="talalatok">
+      <div class="results-heading">
+        <div>
+          <span class="eyebrow">NE MENJEN KÁRBA SEMMI</span>
+          <h2>Ötletek a konyhádból</h2>
+          <p id="resultsDescription">Válassz hozzávalókat, és megmutatjuk, mit készíthetsz belőlük.</p>
+        </div>
+        <label class="sort-control" for="sortSelect">Rendezés
+          <select id="sortSelect">
+            <option value="match">Legtöbb egyezés</option>
+            <option value="time">Legrövidebb idő</option>
+          </select>
+        </label>
+      </div>
+      <div class="recipe-grid" id="recipeGrid">
+        <div class="empty-state">
+          <span class="empty-icon">🥗</span>
+          <h3>Jöhetnek a hozzávalók?</h3>
+          <p>A keresés után itt jelennek meg a hozzávalóidhoz illő receptek.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tip-banner" id="rolunk">
+      <div class="tip-icon">♻</div>
+      <div>
+        <span class="eyebrow">JÓ TIPP</span>
+        <h2>A maradék is lehet főszereplő.</h2>
+        <p>Nem kell mindig új alapanyagokat vásárolnod. Néha a legjobb étel abból készül, ami már a hűtődben vár.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#"><span class="brand-icon">✳</span><span>Konyha<span class="brand-accent">Segéd</span></span></a>
+    <p>Találj ihletet. Főzz kreatívan. Pazarolj kevesebbet.</p>
+  </footer>
+
+  <dialog class="recipe-dialog" id="recipeDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Bezárás">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
 </body>
 </html>
