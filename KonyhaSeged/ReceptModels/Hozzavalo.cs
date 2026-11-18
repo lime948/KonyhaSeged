@@ -6,7 +6,7 @@
     internal class Hozzavalo
     {
         /// <summary>
-        /// A hozzávaló által összeköötött recept azonosítója
+        /// A hozzávaló által összekötött recept azonosítója
         /// </summary>
         private int recept_id;
 
@@ -18,10 +18,10 @@
         /// <summary>
         /// A hozzávaló mennyisége
         /// </summary>
-        private int mennyiseg;
+        private string mennyiseg;
 
         /// <summary>
-        /// A hozzávaló által összeköötött recept azonosítója
+        /// A hozzávaló által összekötött recept azonosítója
         /// </summary>
         public int Recept_id { get => recept_id; set => recept_id = value; }
 
@@ -33,15 +33,15 @@
         /// <summary>
         /// A hozzávaló mennyisége
         /// </summary>
-        public int Mennyiseg { get => mennyiseg; set => mennyiseg = value; }
+        public string Mennyiseg { get => mennyiseg; set => mennyiseg = value; }
 
         /// <summary>
         /// Hozzavalo konstruktora paraméterekkel
         /// </summary>
-        /// <param name="recept_id">A hozzávaló által összeköötött recept azonosítója</param>
+        /// <param name="recept_id">A hozzávaló által összekötött recept azonosítója</param>
         /// <param name="alapanyag_id">Az alapanyag azonosítója</param>
         /// <param name="mennyiseg">A hozzávaló mennyisége</param>
-        public Hozzavalo(int recept_id, int alapanyag_id, int mennyiseg)
+        public Hozzavalo(int recept_id, int alapanyag_id, string mennyiseg)
         {
             Recept_id = recept_id;
             Alapanyag_id = alapanyag_id;
